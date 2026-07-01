@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>抽卡活動</title>
+<title>SSR 聲聲漫 現場抽卡</title>
 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 <style>
   :root{
@@ -267,9 +267,9 @@
 <script>
 /* ====== 設定 ====== */
 const LIFF_ID  = "2010561012-yHCUvvPb";
-const API_URL  = "https://script.google.com/macros/s/AKfycbyAF_Z4Y-Smy34ltLNsjdOHmQfPLehDzVhcCIC05v5naboxwvI-lWhuItBZJ6XxHmU/exec"; // 例如 https://script.google.com/macros/s/xxxx/exec
+const API_URL  = "https://script.google.com/macros/s/AKfycbzxSjEDK_G61KSpFRr409YSHj7FeQDiTqJpotQUI7jxvQl0uIDO_OWpdGeLsKCw0zxO/exec"; // 例如 https://script.google.com/macros/s/xxxx/exec
 
-let idToken = null;
+let accessToken = null; 
 let state   = null;
 let userPicture = "";
 
@@ -354,7 +354,7 @@ function renderState(data) {
 
 /* ── 載入狀態 ── */
 async function refreshStatus() {
-  const data = await callApi({ action: "status", idToken });
+  const data = await callApi({ action: "status", accessToken });
   if (!data.success) { showToast(data.error || "讀取失敗"); return; }
   renderState(data);
 }
@@ -364,7 +364,7 @@ async function doDraw(count) {
   $("draw1Btn").disabled  = true;
   $("draw10Btn").disabled = true;
   try {
-    const data = await callApi({ action: "draw", idToken, count });
+    const data = await callApi({ action: "draw", accessToken, count });
     if (!data.success) {
       showToast(data.error === "NO_DRAWS_LEFT" ? "抽卡次數已用完" : (data.error || "抽卡失敗"));
       if (data.collection) renderState(data);
@@ -443,13 +443,21 @@ async function initLiff() {
       return;
     }
 
-    // ★ 用 getProfile() 取得頭像（比 idToken 更可靠）
     try {
       const profile = await liff.getProfile();
       userPicture = profile.pictureUrl || "";
     } catch (_) {}
 
-    idToken = liff.getIDToken();
+    // ★ 關鍵修改：改用 getAccessToken() 取代 getIDToken()
+    accessToken = liff.getAccessToken();
+    
+    // ★ 加強 null 檢查
+    if (!accessToken) {
+      showToast("無法取得 LINE 驗證憑證，請重新登入");
+      $("loading").innerHTML = "驗證失敗，請嘗試重新整理網頁。";
+      return;
+    }
+
     await refreshStatus();
 
   } catch (err) {
