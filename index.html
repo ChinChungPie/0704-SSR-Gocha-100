@@ -32,250 +32,169 @@
     overflow-x:hidden;
   }
 
-  .brand{
-    text-align:center;
-    margin-bottom:28px;
-  }
-  .brand .eyebrow{
-    letter-spacing:.3em;
-    font-size:11px;
-    color:var(--gold);
-    text-transform:uppercase;
-  }
+  .brand{text-align:center;margin-bottom:28px;}
+  .brand .eyebrow{letter-spacing:.3em;font-size:11px;color:var(--gold);text-transform:uppercase;}
   .brand h1{
-    margin:6px 0 0;
-    font-size:28px;
-    font-weight:800;
+    margin:6px 0 0;font-size:28px;font-weight:800;
     background:linear-gradient(90deg,var(--gold-soft),var(--gold));
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    letter-spacing:.05em;
+    -webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:.05em;
   }
 
-  .login-box{
-    text-align:center;
-    margin-top:60px;
-  }
-  .login-box p{
-    color:var(--ink-dim);
-    margin-bottom:20px;
-    font-size:14px;
-  }
+  .login-box{text-align:center;margin-top:60px;}
+  .login-box p{color:var(--ink-dim);margin-bottom:20px;font-size:14px;}
+
   .btn{
-    appearance:none;
-    border:none;
-    cursor:pointer;
-    font-family:inherit;
-    font-weight:700;
-    border-radius:999px;
-    padding:14px 28px;
-    font-size:15px;
+    appearance:none;border:none;cursor:pointer;font-family:inherit;
+    font-weight:700;border-radius:999px;padding:14px 28px;font-size:15px;
     transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
   }
   .btn:active{transform:scale(.96);}
   .btn:disabled{opacity:.4;cursor:not-allowed;transform:none;}
-  .btn-line{
-    background:var(--line-green);
-    color:#fff;
-    box-shadow:0 8px 24px rgba(6,199,85,.35);
-  }
+  .btn-line{background:var(--line-green);color:#fff;box-shadow:0 8px 24px rgba(6,199,85,.35);}
   .btn-gold{
     background:linear-gradient(135deg,var(--gold-soft),var(--gold));
-    color:#241902;
-    box-shadow:0 8px 24px rgba(232,184,75,.3);
+    color:#241902;box-shadow:0 8px 24px rgba(232,184,75,.3);
   }
-  .btn-ghost{
-    background:transparent;
-    color:var(--ink-dim);
-    border:1px solid #2a3258;
-  }
+  .btn-ghost{background:transparent;color:var(--ink-dim);border:1px solid #2a3258;}
 
-  .panel{
-    width:100%;
-    max-width:480px;
-  }
+  .panel{width:100%;max-width:480px;}
+
   .userline{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    background:var(--bg-panel);
-    border:1px solid #232b4d;
-    border-radius:16px;
-    padding:12px 16px;
-    margin-bottom:18px;
+    display:flex;align-items:center;gap:12px;
+    background:var(--bg-panel);border:1px solid #232b4d;
+    border-radius:16px;padding:12px 16px;margin-bottom:18px;
   }
   .userline img{
     width:40px;height:40px;border-radius:50%;
-    border:2px solid var(--gold);
-    object-fit:cover;
+    border:2px solid var(--gold);object-fit:cover;
+    background:#232b4d;
   }
   .userline .name{font-weight:700;font-size:15px;}
   .userline .sub{font-size:12px;color:var(--ink-dim);}
 
   .stat-card{
-    background:var(--bg-panel);
-    border:1px solid #232b4d;
-    border-radius:20px;
-    padding:20px;
-    margin-bottom:18px;
+    background:var(--bg-panel);border:1px solid #232b4d;
+    border-radius:20px;padding:20px;margin-bottom:18px;
   }
-  .stat-row{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    margin-bottom:10px;
-  }
+  .stat-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;}
   .stat-row .label{font-size:13px;color:var(--ink-dim);}
   .stat-row .value{font-size:14px;font-weight:700;color:var(--gold-soft);}
-  .progress-track{
-    height:8px;border-radius:999px;background:#0d1226;overflow:hidden;
-  }
+  .progress-track{height:8px;border-radius:999px;background:#0d1226;overflow:hidden;}
   .progress-fill{
     height:100%;border-radius:999px;
     background:linear-gradient(90deg,var(--gold),var(--gold-soft));
     transition:width .6s ease;
   }
-  .rate-badge{
-    margin-top:14px;
-    text-align:center;
-    font-size:13px;
-    color:var(--ink-dim);
-  }
+  .rate-badge{margin-top:14px;text-align:center;font-size:13px;color:var(--ink-dim);}
   .rate-badge b{color:var(--gold-soft);font-size:16px;}
-  .rate-complete{
-    color:#ffe9a8 !important;
-    font-weight:700;
-  }
+  .rate-complete{color:#ffe9a8 !important;font-weight:700;}
 
-  .draw-actions{
-    display:flex;
-    gap:10px;
-    margin-bottom:24px;
-  }
+  .draw-actions{display:flex;gap:10px;margin-bottom:24px;}
   .draw-actions .btn{flex:1;}
 
   .section-title{
-    font-size:13px;
-    letter-spacing:.15em;
-    color:var(--ink-dim);
-    text-transform:uppercase;
+    font-size:13px;letter-spacing:.15em;
+    color:var(--ink-dim);text-transform:uppercase;
     margin:0 0 12px 4px;
   }
 
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:14px;
-    margin-bottom:30px;
-  }
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:30px;}
+
   .card{
     position:relative;
-    background:var(--card-back);
-    border-radius:16px;
-    overflow:hidden;
-    border:1px solid #283058;
-    aspect-ratio:3/4;
-    display:flex;
-    flex-direction:column;
+    background:var(--card-back);border-radius:16px;overflow:hidden;
+    border:1px solid #283058;aspect-ratio:3/4;
+    display:flex;flex-direction:column;
   }
   .card.locked{opacity:.4;filter:grayscale(1);}
-  .card .img-wrap{
-    flex:1;
-    background:#0d1226;
-    display:flex;align-items:center;justify-content:center;
-    overflow:hidden;
-  }
+  /* 解鎖的卡片可點擊 */
+  .card.unlocked{cursor:pointer;}
+  .card.unlocked:hover{border-color:var(--gold);transform:translateY(-2px);transition:transform .2s,border-color .2s;}
+  .card .img-wrap{flex:1;background:#0d1226;display:flex;align-items:center;justify-content:center;overflow:hidden;}
   .card .img-wrap img{width:100%;height:100%;object-fit:cover;}
-  .card .meta{
-    padding:8px 10px;
-    background:rgba(0,0,0,.25);
-  }
+  .card .meta{padding:8px 10px;background:rgba(0,0,0,.25);}
   .card .meta .cname{font-size:13px;font-weight:700;}
   .card .count{
-    position:absolute;
-    top:8px;right:8px;
-    background:var(--gold);
-    color:#241902;
-    font-size:11px;font-weight:800;
-    border-radius:999px;
+    position:absolute;top:8px;right:8px;
+    background:var(--gold);color:#241902;
+    font-size:11px;font-weight:800;border-radius:999px;
     min-width:22px;height:22px;
-    display:flex;align-items:center;justify-content:center;
-    padding:0 6px;
+    display:flex;align-items:center;justify-content:center;padding:0 6px;
   }
+  /* 放大圖示提示 */
+  .card.unlocked .zoom-hint{
+    position:absolute;bottom:36px;right:8px;
+    background:rgba(0,0,0,.55);border-radius:6px;
+    padding:2px 5px;font-size:10px;color:var(--gold-soft);
+    opacity:0;transition:opacity .2s;
+  }
+  .card.unlocked:hover .zoom-hint{opacity:1;}
 
+  /* ---- 抽卡結果 Overlay ---- */
   .overlay{
     position:fixed;inset:0;
-    background:rgba(5,7,16,.88);
-    display:none;
-    align-items:center;justify-content:center;
-    z-index:50;
-    flex-direction:column;
-    padding:20px;
+    background:rgba(5,7,16,.9);
+    display:none;align-items:center;justify-content:center;
+    z-index:50;flex-direction:column;padding:20px;
   }
   .overlay.show{display:flex;}
   .reveal-stage{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    justify-content:center;
-    max-width:520px;
-    margin-bottom:20px;
+    display:flex;flex-wrap:wrap;gap:12px;
+    justify-content:center;max-width:520px;margin-bottom:20px;
   }
   .reveal-card{
-    width:100px;
-    aspect-ratio:3/4;
-    border-radius:12px;
-    overflow:hidden;
-    background:var(--card-back);
-    border:1px solid var(--gold);
-    opacity:0;
-    transform:scale(.7) rotateY(90deg);
+    width:100px;aspect-ratio:3/4;border-radius:12px;overflow:hidden;
+    background:var(--card-back);border:1px solid var(--gold);
+    opacity:0;transform:scale(.7) rotateY(90deg);
     animation:flipIn .45s forwards;
   }
   .reveal-card img{width:100%;height:100%;object-fit:cover;}
-  @keyframes flipIn{
-    to{opacity:1;transform:scale(1) rotateY(0deg);}
+  @keyframes flipIn{to{opacity:1;transform:scale(1) rotateY(0deg);}}
+
+  /* ---- 圖片 Lightbox ---- */
+  .lightbox{
+    position:fixed;inset:0;
+    background:rgba(5,7,16,.95);
+    display:none;align-items:center;justify-content:center;
+    z-index:80;flex-direction:column;padding:24px;
+    gap:16px;
+  }
+  .lightbox.show{display:flex;}
+  .lightbox img{
+    max-width:100%;max-height:70vh;
+    border-radius:16px;border:2px solid var(--gold);
+    object-fit:contain;
+  }
+  .lightbox .lb-name{
+    font-size:16px;font-weight:700;
+    color:var(--gold-soft);
+  }
+  .lightbox .lb-actions{display:flex;gap:12px;}
+  .btn-download{
+    background:linear-gradient(135deg,var(--gold-soft),var(--gold));
+    color:#241902;border:none;cursor:pointer;font-family:inherit;
+    font-weight:700;border-radius:999px;padding:12px 24px;font-size:14px;
   }
 
-  .loading{
-    text-align:center;
-    color:var(--ink-dim);
-    margin-top:80px;
-    font-size:14px;
-  }
+  /* ---- 其他 ---- */
+  .loading{text-align:center;color:var(--ink-dim);margin-top:80px;font-size:14px;}
   .spinner{
-    width:32px;height:32px;
-    border:3px solid #232b4d;
-    border-top-color:var(--gold);
-    border-radius:50%;
-    margin:0 auto 14px;
-    animation:spin .8s linear infinite;
+    width:32px;height:32px;border:3px solid #232b4d;
+    border-top-color:var(--gold);border-radius:50%;
+    margin:0 auto 14px;animation:spin .8s linear infinite;
   }
   @keyframes spin{to{transform:rotate(360deg);}}
 
   .toast{
-    position:fixed;
-    bottom:24px;left:50%;
-    transform:translateX(-50%);
-    background:#1d2440;
-    border:1px solid var(--gold);
-    padding:10px 18px;
-    border-radius:999px;
-    font-size:13px;
-    opacity:0;
-    transition:opacity .3s ease;
-    pointer-events:none;
-    z-index:60;
+    position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
+    background:#1d2440;border:1px solid var(--gold);
+    padding:10px 18px;border-radius:999px;font-size:13px;
+    opacity:0;transition:opacity .3s ease;pointer-events:none;z-index:60;
+    white-space:nowrap;
   }
   .toast.show{opacity:1;}
 
-  canvas#fireworks{
-    position:fixed;inset:0;
-    pointer-events:none;
-    z-index:70;
-    display:none;
-  }
+  canvas#fireworks{position:fixed;inset:0;pointer-events:none;z-index:70;display:none;}
 </style>
 </head>
 <body>
@@ -301,7 +220,7 @@
 <div id="panel" class="panel" style="display:none;">
 
   <div class="userline">
-    <img id="userPic" src="" alt="">
+    <img id="userPic" src="" alt="頭像">
     <div>
       <div class="name" id="userName">—</div>
       <div class="sub" id="userId">—</div>
@@ -314,7 +233,6 @@
       <span class="value" id="drawsLeft">— / 100</span>
     </div>
     <div class="progress-track"><div class="progress-fill" id="drawsProgress" style="width:0%"></div></div>
-
     <div class="rate-badge" id="rateBadge" style="margin-top:18px;">
       收集進度 <b id="rateText">0%</b>（<span id="ownedText">0</span> / <span id="totalText">0</span> 種）
     </div>
@@ -330,217 +248,278 @@
 
 </div>
 
+<!-- 抽卡結果 -->
 <div class="overlay" id="overlay">
   <div class="reveal-stage" id="revealStage"></div>
-  <button class="btn btn-ghost" id="closeRevealBtn">關閉</button>
+  <button class="btn btn-ghost" id="closeRevealBtn">關閉，查看收藏</button>
+</div>
+
+<!-- 圖片 Lightbox -->
+<div class="lightbox" id="lightbox">
+  <img id="lbImg" src="" alt="">
+  <div class="lb-name" id="lbName"></div>
+  <div class="lb-actions">
+    <a id="lbDownload" class="btn-download" download>⬇ 下載圖片</a>
+    <button class="btn btn-ghost" id="closeLbBtn">關閉</button>
+  </div>
 </div>
 
 <script>
-/* ====== 設定：請填入你部署完成的 Apps Script Web App URL ====== */
-const LIFF_ID = "2010561012-yHCUvvPb";
-const API_URL = "https://script.google.com/macros/s/AKfycbyAF_Z4Y-Smy34ltLNsjdOHmQfPLehDzVhcCIC05v5naboxwvI-lWhuItBZJ6XxHmU/exec"; // 例如 https://script.google.com/macros/s/xxxx/exec
+/* ====== 設定 ====== */
+const LIFF_ID  = "2010561012-yHCUvvPb";
+const API_URL  = "https://script.google.com/macros/s/AKfycbzmYWu7I5962iLcVKUzipDaAyXj1zEPrcgL3XIcjdhzvtaHLyNi2lLC9X7KZcEP1uGx/exec"; // 例如 https://script.google.com/macros/s/xxxx/exec
 
 let idToken = null;
-let state = null;
+let state   = null;
+let userPicture = "";
 
-const $ = (id) => document.getElementById(id);
+const $ = id => document.getElementById(id);
 
-function showToast(msg){
+/* ── Toast ── */
+function showToast(msg) {
   const t = $("toast");
   t.textContent = msg;
   t.classList.add("show");
-  setTimeout(()=>t.classList.remove("show"), 2200);
+  setTimeout(() => t.classList.remove("show"), 2400);
 }
 
-async function callApi(payload){
+/* ── API 呼叫 ── */
+async function callApi(payload) {
   const resp = await fetch(API_URL, {
     method: "POST",
-    headers: { "Content-Type": "text/plain;charset=utf-8" }, // 避免 CORS preflight
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
     body: JSON.stringify(payload)
   });
-  return await resp.json();
+  return resp.json();
 }
 
-function renderState(data){
+/* ── 渲染整個頁面狀態 ── */
+function renderState(data) {
   state = data;
-  $("loading").style.display = "none";
+  $("loading").style.display  = "none";
   $("loginBox").style.display = "none";
-  $("panel").style.display = "block";
+  $("panel").style.display    = "block";
+
+  // 頭像：優先使用前端從 liff.getProfile() 取到的 pictureUrl
+  const pic = $("userPic");
+  if (userPicture) {
+    pic.src = userPicture;
+  } else if (data.picture) {
+    pic.src = data.picture;
+  }
 
   $("userName").textContent = data.displayName || "";
-  $("userId").textContent = "ID: " + (data.userId || "").slice(0,10) + "...";
+  $("userId").textContent   = "ID: " + (data.userId || "").slice(0, 10) + "...";
 
   $("drawsLeft").textContent = data.drawsRemaining + " / " + data.totalDraws;
-  $("drawsProgress").style.width = (100 - (data.drawsRemaining / data.totalDraws * 100)) + "%";
+  const usedPct = 100 - (data.drawsRemaining / data.totalDraws * 100);
+  $("drawsProgress").style.width = usedPct + "%";
 
-  $("rateText").textContent = data.rate + "%";
+  $("rateText").textContent  = data.rate + "%";
   $("ownedText").textContent = data.ownedTypes;
   $("totalText").textContent = data.totalTypes;
 
-  $("draw1Btn").disabled = data.drawsRemaining <= 0;
-  $("draw10Btn").disabled = data.drawsRemaining <= 0;
-  $("draw1Btn").textContent = data.drawsRemaining <= 0 ? "已抽完" : "抽 1 次";
-  $("draw10Btn").textContent = data.drawsRemaining <= 0 ? "已抽完" : "抽 10 次";
+  const noDraws = data.drawsRemaining <= 0;
+  $("draw1Btn").disabled  = noDraws;
+  $("draw10Btn").disabled = noDraws;
+  $("draw1Btn").textContent  = noDraws ? "已抽完" : "抽 1 次";
+  $("draw10Btn").textContent = noDraws ? "已抽完" : "抽 10 次";
 
+  // 收藏格子
   const grid = $("grid");
   grid.innerHTML = "";
-  data.collection.forEach(c=>{
+  data.collection.forEach(c => {
     const div = document.createElement("div");
-    div.className = "card" + (c.count > 0 ? "" : " locked");
+    const owned = c.count > 0;
+    div.className = "card " + (owned ? "unlocked" : "locked");
     div.innerHTML = `
       <div class="img-wrap"><img src="${c.image}" alt="${c.name}" onerror="this.style.opacity=0"></div>
-      <div class="meta"><div class="cname">${c.count>0 ? c.name : "???"}</div></div>
-      ${c.count>0 ? `<div class="count">x${c.count}</div>` : ""}
+      <div class="meta"><div class="cname">${owned ? c.name : "???"}</div></div>
+      ${owned ? `<div class="count">x${c.count}</div><span class="zoom-hint">🔍 點擊放大</span>` : ""}
     `;
+    if (owned) {
+      div.addEventListener("click", () => openLightbox(c.name, c.image));
+    }
     grid.appendChild(div);
   });
 
-  const rateBadge = $("rateBadge");
-  if (data.rate >= 100){
-    rateBadge.classList.add("rate-complete");
+  const rb = $("rateBadge");
+  if (data.rate >= 100) {
+    rb.classList.add("rate-complete");
     launchFireworks();
   } else {
-    rateBadge.classList.remove("rate-complete");
+    rb.classList.remove("rate-complete");
   }
 }
 
-async function refreshStatus(){
+/* ── 載入狀態 ── */
+async function refreshStatus() {
   const data = await callApi({ action: "status", idToken });
-  if (!data.success){
-    showToast(data.error || "讀取失敗");
-    return;
-  }
+  if (!data.success) { showToast(data.error || "讀取失敗"); return; }
   renderState(data);
 }
 
-async function doDraw(count){
-  $("draw1Btn").disabled = true;
+/* ── 抽卡 ── */
+async function doDraw(count) {
+  $("draw1Btn").disabled  = true;
   $("draw10Btn").disabled = true;
-  try{
+  try {
     const data = await callApi({ action: "draw", idToken, count });
-    if (!data.success){
+    if (!data.success) {
       showToast(data.error === "NO_DRAWS_LEFT" ? "抽卡次數已用完" : (data.error || "抽卡失敗"));
-      renderState(data);
+      if (data.collection) renderState(data);
       return;
     }
     showReveal(data.results);
     renderState(data);
-  } catch(err){
+  } catch (err) {
     showToast("連線發生問題，請稍後再試");
   } finally {
-    if (state && state.drawsRemaining > 0){
-      $("draw1Btn").disabled = false;
+    if (state && state.drawsRemaining > 0) {
+      $("draw1Btn").disabled  = false;
       $("draw10Btn").disabled = false;
     }
   }
 }
 
-function showReveal(results){
+/* ── 抽卡結果展示 ── */
+function showReveal(results) {
   const stage = $("revealStage");
   stage.innerHTML = "";
-  results.forEach((r,i)=>{
+  results.forEach((r, i) => {
     const el = document.createElement("div");
     el.className = "reveal-card";
-    el.style.animationDelay = (i * 0.12) + "s";
+    el.style.animationDelay = (i * 0.1) + "s";
     el.innerHTML = `<img src="${r.image}" alt="${r.name}" onerror="this.style.opacity=0">`;
     stage.appendChild(el);
   });
   $("overlay").classList.add("show");
 }
 
-$("closeRevealBtn").addEventListener("click", ()=>{
-  $("overlay").classList.remove("show");
+$("closeRevealBtn").addEventListener("click", () => $("overlay").classList.remove("show"));
+$("draw1Btn").addEventListener("click",  () => doDraw(1));
+$("draw10Btn").addEventListener("click", () => doDraw(10));
+
+/* ── Lightbox（點卡放大＋下載）── */
+function openLightbox(name, imageUrl) {
+  $("lbImg").src         = imageUrl;
+  $("lbName").textContent = name;
+
+  // 下載連結：先嘗試用 fetch 轉 blob（跨域圖片需伺服器允許 CORS，否則退回直接開啟）
+  const dlBtn = $("lbDownload");
+  dlBtn.href     = imageUrl;
+  dlBtn.download = name + ".jpg";
+
+  // 嘗試 blob 下載（Google Drive 等跨域圖床可能不支援，退回直接連結）
+  fetch(imageUrl, { mode: "cors" })
+    .then(r => r.blob())
+    .then(blob => {
+      const url = URL.createObjectURL(blob);
+      dlBtn.href = url;
+      dlBtn.onclick = () => setTimeout(() => URL.revokeObjectURL(url), 1000);
+    })
+    .catch(() => {
+      // 跨域失敗：點擊後在新頁籤開啟讓使用者長按儲存
+      dlBtn.onclick = () => window.open(imageUrl, "_blank");
+    });
+
+  $("lightbox").classList.add("show");
+}
+
+$("closeLbBtn").addEventListener("click", () => $("lightbox").classList.remove("show"));
+$("lightbox").addEventListener("click", e => {
+  if (e.target === $("lightbox")) $("lightbox").classList.remove("show");
 });
 
-$("draw1Btn").addEventListener("click", ()=> doDraw(1));
-$("draw10Btn").addEventListener("click", ()=> doDraw(10));
-
-/* ====== LIFF 初始化 ====== */
-async function initLiff(){
-  try{
+/* ── LIFF 初始化 ── */
+async function initLiff() {
+  try {
     await liff.init({ liffId: LIFF_ID });
-    if (!liff.isLoggedIn()){
-      $("loading").style.display = "none";
+
+    if (!liff.isLoggedIn()) {
+      $("loading").style.display  = "none";
       $("loginBox").style.display = "block";
-      $("loginBtn").addEventListener("click", ()=> liff.login());
+      $("loginBtn").addEventListener("click", () => liff.login());
       return;
     }
+
+    // ★ 用 getProfile() 取得頭像（比 idToken 更可靠）
+    try {
+      const profile = await liff.getProfile();
+      userPicture = profile.pictureUrl || "";
+    } catch (_) {}
+
     idToken = liff.getIDToken();
     await refreshStatus();
-  } catch(err){
+
+  } catch (err) {
     $("loading").innerHTML = "初始化失敗：" + err.message;
   }
 }
 initLiff();
 
-/* ====== 煙火動畫（收集率 100% 時觸發） ====== */
-function launchFireworks(){
+/* ── 煙火動畫 ── */
+function launchFireworks() {
   const canvas = $("fireworks");
   if (canvas.dataset.playing === "1") return;
   canvas.dataset.playing = "1";
-  canvas.style.display = "block";
-  const ctx = canvas.getContext("2d");
-  canvas.width = window.innerWidth;
+  canvas.style.display   = "block";
+  canvas.width  = window.innerWidth;
   canvas.height = window.innerHeight;
+  const ctx = canvas.getContext("2d");
 
-  const colors = ["#e8b84b","#f4d98a","#ff6b6b","#6bd1ff","#9affb0","#ffffff"];
+  const colors = ["#e8b84b","#f4d98a","#ff6b6b","#6bd1ff","#9affb0","#ffffff","#ffaaee"];
   let particles = [];
 
-  function spawnBurst(x,y){
-    const count = 40;
-    for(let i=0;i<count;i++){
-      const angle = (Math.PI*2*i)/count;
-      const speed = 2 + Math.random()*3;
+  function spawnBurst(x, y) {
+    for (let i = 0; i < 50; i++) {
+      const angle = (Math.PI * 2 * i) / 50;
+      const speed = 2 + Math.random() * 4;
       particles.push({
-        x,y,
-        vx: Math.cos(angle)*speed,
-        vy: Math.sin(angle)*speed,
-        life: 60 + Math.random()*20,
-        color: colors[Math.floor(Math.random()*colors.length)]
+        x, y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        life: 70 + Math.random() * 20,
+        color: colors[Math.floor(Math.random() * colors.length)]
       });
     }
   }
 
-  let frame = 0;
-  let bursts = 0;
-  const maxBursts = 6;
+  let frame = 0, bursts = 0;
+  const maxBursts = 8;
 
-  function loop(){
-    ctx.fillStyle = "rgba(5,7,16,0.18)";
-    ctx.fillRect(0,0,canvas.width,canvas.height);
+  (function loop() {
+    ctx.fillStyle = "rgba(5,7,16,0.16)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    if (frame % 28 === 0 && bursts < maxBursts){
+    if (frame % 22 === 0 && bursts < maxBursts) {
       spawnBurst(
-        canvas.width * (0.2 + Math.random()*0.6),
-        canvas.height * (0.2 + Math.random()*0.35)
+        canvas.width  * (0.15 + Math.random() * 0.7),
+        canvas.height * (0.1  + Math.random() * 0.4)
       );
       bursts++;
     }
 
-    particles.forEach(p=>{
-      p.x += p.vx;
-      p.y += p.vy;
-      p.vy += 0.03;
-      p.life -= 1;
-      ctx.globalAlpha = Math.max(p.life/80, 0);
-      ctx.fillStyle = p.color;
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.vy += 0.04; p.life--;
+      ctx.globalAlpha = Math.max(p.life / 90, 0);
+      ctx.fillStyle   = p.color;
       ctx.beginPath();
-      ctx.arc(p.x,p.y,2.4,0,Math.PI*2);
+      ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
       ctx.fill();
     });
     ctx.globalAlpha = 1;
-    particles = particles.filter(p=>p.life>0);
+    particles = particles.filter(p => p.life > 0);
 
     frame++;
-    if (bursts < maxBursts || particles.length > 0){
+    if (bursts < maxBursts || particles.length > 0) {
       requestAnimationFrame(loop);
     } else {
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      canvas.style.display = "none";
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      canvas.style.display   = "none";
       canvas.dataset.playing = "0";
     }
-  }
-  loop();
+  })();
 }
 </script>
 </body>
