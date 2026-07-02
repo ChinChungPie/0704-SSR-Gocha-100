@@ -89,6 +89,25 @@
   .rate-badge b{color:var(--gold-soft);font-size:16px;}
   .rate-complete{color:#ffe9a8 !important;font-weight:700;}
 
+  /* ---- 達成 100% 的兌換提示 ---- */
+  .reward-msg {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: rgba(232, 184, 75, 0.15);
+    border: 1px dashed var(--gold);
+    border-radius: 8px;
+    color: var(--gold-soft);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(232, 184, 75, 0.4); }
+    70% { box-shadow: 0 0 0 6px rgba(232, 184, 75, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(232, 184, 75, 0); }
+  }
+
   .draw-actions{display:flex;gap:10px;margin-bottom:24px;}
   .draw-actions .btn{flex:1;}
 
@@ -236,6 +255,10 @@
     <div class="rate-badge" id="rateBadge" style="margin-top:18px;">
       收集進度 <b id="rateText">0%</b>（<span id="ownedText">0</span> / <span id="totalText">0</span> 種）
     </div>
+
+    <div id="rewardMsg" class="reward-msg" style="display:none;">
+      🎉 恭喜圖鑑收集完成，請截圖或出示此畫面，至前台兌換「抱笑神器💕」
+    </div>
   </div>
 
   <div class="draw-actions">
@@ -248,13 +271,11 @@
 
 </div>
 
-<!-- 抽卡結果 -->
 <div class="overlay" id="overlay">
   <div class="reveal-stage" id="revealStage"></div>
   <button class="btn btn-ghost" id="closeRevealBtn">關閉，查看收藏</button>
 </div>
 
-<!-- 圖片 Lightbox -->
 <div class="lightbox" id="lightbox">
   <img id="lbImg" src="" alt="">
   <div class="lb-name" id="lbName"></div>
@@ -344,11 +365,15 @@ function renderState(data) {
   });
 
   const rb = $("rateBadge");
+  const rm = $("rewardMsg");
+  
   if (data.rate >= 100) {
     rb.classList.add("rate-complete");
+    if (rm) rm.style.display = "block";
     launchFireworks();
   } else {
     rb.classList.remove("rate-complete");
+    if (rm) rm.style.display = "none";
   }
 }
 
